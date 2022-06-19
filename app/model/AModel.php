@@ -1,8 +1,5 @@
 <?php
 
-use Firebase\JWT\JWT;
-use Firebase\JWT\Key;
-use Phalcon\Http\Request;
 use Phalcon\Mvc\Model;
 
 class AModel extends Model

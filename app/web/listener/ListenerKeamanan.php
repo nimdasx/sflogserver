@@ -1,9 +1,5 @@
 <?php
 
-use Firebase\JWT\JWT;
-use Firebase\JWT\Key;
-use Phalcon\Http\Request;
-
 class ListenerKeamanan extends Phalcon\Di\Injectable
 {
 

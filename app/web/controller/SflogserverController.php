@@ -1,7 +1,5 @@
 <?php
 
-use Phalcon\Mvc\Model\Query\Builder;
-
 class SflogserverController extends AController
 {
 

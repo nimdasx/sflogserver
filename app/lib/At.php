@@ -1,7 +1,7 @@
 <?php
 
-use Phalcon\Http\Response;
 use Phalcon\Http\Request;
+use Phalcon\Http\Response;
 
 class At
 {
