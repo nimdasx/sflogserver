@@ -29,7 +29,7 @@ check example in httpclient/req_sflogserver.http
 ## how to access log data
 
 currently i dont provide user interface to access log data,
-just use your mysql db gui
+just use your db gui app
 
 ## note
 
