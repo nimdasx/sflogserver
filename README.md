@@ -28,8 +28,9 @@ check example in httpclient/req_sflogserver.http
 
 ## how to access log data
 
-currently i dont provide user interface to access log data,
-just use your db gui app
+currently i dont provide user interface to access log data,  
+just use your db gui app or  
+you can use api to retrive data, check example in httpclient/req_sflogserver.http
 
 ## note
 

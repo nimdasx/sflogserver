@@ -11,7 +11,7 @@ class SflogserverController extends AController
         $p = $this->request->getJsonRawBody();
 
         $la = new Sflogserver();
-        $la->apx_id = $this->getInput('apx_id');
+        $la->apx_id = At::getInput('apx_id');
         $la->activity = $p->activity;
         $la->category = $p->category;
         $la->message = $p->message;
@@ -20,7 +20,7 @@ class SflogserverController extends AController
         $la->userx = $p->userx;
         $la->ipx = $p->ipx;
 
-        $datetimex = $this->getInput('datetimex');
+        $datetimex = At::getInput('datetimex');
         if (atIsValidDateTime($datetimex)) {
             $la->datetimex = $datetimex;
         } else {
@@ -29,8 +29,14 @@ class SflogserverController extends AController
 
         $la->queryx = $p->queryx;
         $la->datax = $p->datax;
-        $la->save();
-        return $la->sflogserver_id;
+
+        if (!$la->create()) {
+            $this->dm['error'] = $la->getMessages();
+            return $this->setJsonRespon('terjadi kesalahan', 1);
+        } else {
+            return $this->setJsonRespon(null, null, $la);
+        }
+
     }
 
     public function getAction()

@@ -32,8 +32,8 @@ class ListenerKeamanan extends Phalcon\Di\Injectable
         }
 
         //tidak punya akses
-        $apx_ids = At::konfigGet('apx_ids')->toArray();
-        $apx_id = $this->request->get('apx_id');
+        $apx_ids = At::getKonfig('apx_ids')->toArray();
+        $apx_id = At::getInput('apx_id');
         if (!in_array($apx_id, $apx_ids)) {
             $pesan = "apx_id $apx_id denied on $kontroler/$aksi";
             return $this->responTolak($pesan);

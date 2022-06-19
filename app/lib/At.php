@@ -1,6 +1,7 @@
 <?php
 
 use Phalcon\Http\Response;
+use Phalcon\Http\Request;
 
 class At
 {
@@ -75,7 +76,7 @@ class At
     /*
      * ambil var dari konfigurasi...php
      */
-    static function konfigGet($konfige)
+    static function getKonfig($konfige)
     {
 
         $di = Phalcon\DI::getDefault();
@@ -97,6 +98,23 @@ class At
 
         return $isine;
 
+    }
+
+    /*
+     * auto detect input seko get opo seko json body
+     */
+    static function getInput($telo)
+    {
+
+        $request = new Request();
+
+        //input
+        $p = $request->getJsonRawBody();
+        $pendem = $p->{$telo};
+        if ($request->has($telo)) {
+            $pendem = $request->get($telo);
+        }
+        return $pendem;
     }
 
 }

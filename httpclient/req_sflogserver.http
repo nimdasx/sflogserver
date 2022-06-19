@@ -1,8 +1,9 @@
-### insert
-GET {{baseurl}}/sflogserver/insert?apx_id={{apx_id}}
+### send log to sflogserver
+GET {{baseurl}}/sflogserver/insert
 Content-Type: application/json
 
 {
+  "apx_id": "{{apx_id}}",
   "activity": "sfdsgd",
   "category": "sdsfsdf",
   "message": "sfasgasgsg",
@@ -13,4 +14,22 @@ Content-Type: application/json
   "datetimex": "2022-05-02 23:23:12",
   "queryx": "faagasgasg",
   "datax": "fwtasgg"
+}
+
+### retrive data, get by sflogserver_id
+GET {{baseurl}}/sflogserver/get
+Content-Type: application/json
+
+{
+  "apx_id": "{{apx_id}}",
+  "sflogserver_id": "9921beb0-34fe-4248-b431-b3093c7b941d"
+}
+
+### retrive data, get list
+GET {{baseurl}}/sflogserver/get_list
+Content-Type: application/json
+
+{
+  "apx_id": "{{apx_id}}",
+  "search_str": "gundu"
 }

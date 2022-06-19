@@ -35,8 +35,11 @@ class ListenerKerusakan extends Phalcon\Di\Injectable
         ];
         $respon = At::setJsonRespon($telo, 1, null, null, $debugx);
         $respon->send();
-        exit;
+
+        //kalo direturn false kok error controller not found gak kehandle ya
         //return false;
+
+        exit;
 
     }
 }

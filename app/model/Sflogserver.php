@@ -63,7 +63,7 @@ class Sflogserver extends AModel
                 'Sflogserver.datax',
                 'Sflogserver.i_ip',
                 'Sflogserver.i_datetime',
-                'sflogserver.i_query'
+                'Sflogserver.i_query'
             ])
             ->from("Sflogserver");
         if ($this->limit != '') {
@@ -109,7 +109,7 @@ class Sflogserver extends AModel
     {
         $b = new Builder();
         if ($this->sflogserver_id != '') {
-            $b->andWhere('Sflogserver.log_akses_id=:pk:', ['pk' => $this->sflogserver_id]);
+            $b->andWhere('Sflogserver.sflogserver_id=:pk:', ['pk' => $this->sflogserver_id]);
         }
         if ($this->search_str != '') {
             $b->andWhere('
