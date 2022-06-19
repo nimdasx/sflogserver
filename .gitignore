@@ -13,12 +13,3 @@
 /app/konfigurasi_*.php
 /app/env.php
 /app/web-root/error_log
-
-# komatibility ke yang lama biar gak katut ke commit setelah pindah direktori
-/vendor
-/composer.lock
-/konfigurasi.php
-
-# ssh bukti survey
-/app/web-root/ssh/bukti_survey/*
-/app/web-root/ssh/berita_acara/*
