@@ -1,0 +1,10 @@
+<?php
+/*
+ * file ini tidak dipakai, hanya untuk dev kalao run-nya pake php langsung
+ */
+$uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+if ($uri !== '/' && file_exists(__DIR__ . '/web-root' . $uri)) {
+    return false;
+}
+$_GET['_url'] = $_SERVER['REQUEST_URI'];
+require_once __DIR__ . '/web-root/index.php';

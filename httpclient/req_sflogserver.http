@@ -1,0 +1,16 @@
+### insert
+GET {{baseurl}}/sflogserver/insert?apx_id={{apx_id}}
+Content-Type: application/json
+
+{
+  "activity": "sfdsgd",
+  "category": "sdsfsdf",
+  "message": "sfasgasgsg",
+  "trace": "sdatwtwt",
+  "user_agent": "afasgagagasg",
+  "userx": "sdsfsf",
+  "ipx": "aagasgasg",
+  "datetimex": "2022-05-02 23:23:12",
+  "queryx": "faagasgasg",
+  "datax": "fwtasgg"
+}

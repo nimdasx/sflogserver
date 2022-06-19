@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  sflogserver:
+    #container_name: sflogserver
+    #image: nimdasx/sf-phalcon4
+    #image: sabrecode/nginxphp7phalcon4
+    #image: nimdasx/sf-nginx-php74
+    image: ghcr.io/nimdasx/docker-nginx-php7-phalcon4:latest
+    restart: unless-stopped
+    ports:
+      - 1170:80
+    volumes:
+      #apache
+      #- .:/var/www/html
+      #nginx
+      - ./nginx/10-location-root.conf:/opt/docker/etc/nginx/vhost.common.d/10-location-root.conf
+      - ./nginx/vhost.conf:/opt/docker/etc/nginx/vhost.conf
+      - ./php/php-nimdasx.ini:/usr/local/etc/php/conf.d/php-nimdasx.ini
+      - ../app:/app
