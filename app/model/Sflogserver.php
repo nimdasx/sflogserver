@@ -9,6 +9,7 @@ class Sflogserver extends AModel
     public $date_start = null;
     public $date_end = null;
     public $apx_id = null;
+    public $app_id = null;
     public $activity = null;
     public $category = null;
     public $message = null;
@@ -51,6 +52,7 @@ class Sflogserver extends AModel
             ->columns([
                 'Sflogserver.sflogserver_id',
                 'Sflogserver.apx_id',
+                'Sflogserver.app_id',
                 'Sflogserver.activity',
                 'Sflogserver.category',
                 'Sflogserver.message',

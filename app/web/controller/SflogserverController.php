@@ -10,6 +10,7 @@ class SflogserverController extends AController
 
         $la = new Sflogserver();
         $la->apx_id = At::getInput('apx_id');
+        $la->app_id = $p->app_id;
         $la->activity = $p->activity;
         $la->category = $p->category;
         $la->message = $p->message;
