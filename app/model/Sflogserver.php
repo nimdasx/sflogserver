@@ -11,7 +11,7 @@ class Sflogserver extends AModel
     public $apx_id = null;
     public $app_id = null;
     public $db_name = null;
-    public $db_ip = null;
+    public $db_host = null;
     public $activity = null;
     public $category = null;
     public $message = null;
@@ -56,7 +56,7 @@ class Sflogserver extends AModel
                 'Sflogserver.apx_id',
                 'Sflogserver.app_id',
                 'Sflogserver.db_name',
-                'Sflogserver.db_ip',
+                'Sflogserver.db_host',
                 'Sflogserver.activity',
                 'Sflogserver.category',
                 'Sflogserver.message',

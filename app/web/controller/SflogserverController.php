@@ -12,7 +12,7 @@ class SflogserverController extends AController
         $la->apx_id = At::getInput('apx_id');
         $la->app_id = $p->app_id;
         $la->db_name = $p->db_name;
-        $la->db_ip = $p->db_ip;
+        $la->db_host = $p->db_host;
         $la->activity = $p->activity;
         $la->category = $p->category;
         $la->message = $p->message;
