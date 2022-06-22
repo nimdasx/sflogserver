@@ -30,6 +30,7 @@ class SflogserverController extends AController
 
         $la->queryx = $p->queryx;
         $la->datax = $p->datax;
+        $la->log_id = $p->log_id;
 
         if (!$la->create()) {
             $this->dm['error'] = $la->getMessages();

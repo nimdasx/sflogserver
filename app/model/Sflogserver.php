@@ -22,6 +22,7 @@ class Sflogserver extends AModel
     public $datetimex = null;
     public $queryx = null;
     public $datax = null;
+    public $log_id = null;
 
     static function getDataById($id)
     {
@@ -67,6 +68,7 @@ class Sflogserver extends AModel
                 'Sflogserver.datetimex',
                 'Sflogserver.queryx',
                 'Sflogserver.datax',
+                'Sflogserver.log_id',
                 'Sflogserver.i_ip',
                 'Sflogserver.i_datetime',
                 'Sflogserver.i_query'
